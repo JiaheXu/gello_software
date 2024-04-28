@@ -3,7 +3,7 @@ dm_control
 Pillow
 pygame
 pyspacemouse
-PyQt6
+#PyQt6
 pyquaternion
 pyrealsense2
 pure-python-adb

@@ -8,3 +8,29 @@ python3 experiments/launch_nodes.py --robot sim_panda
 
 python3 experiments/run_env.py --agent=gello
 
+python experiments/launch_nodes.py --robot=panda
+
+
+Traceback (most recent call last):
+  File "experiments/launch_nodes.py", line 94, in <module>
+    main(tyro.cli(Args))
+  File "experiments/launch_nodes.py", line 90, in main
+    launch_robot_server(args)
+  File "experiments/launch_nodes.py", line 69, in launch_robot_server
+    robot = PandaRobot(robot_ip=args.robot_ip)
+  File "/home/jiahe/gello_software/gello/robots/panda.py", line 17, in __init__
+    self.robot = RobotInterface(
+  File "/home/jiahe/anaconda3/envs/gello/lib/python3.8/site-packages/polymetis/robot_interface.py", line 348, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/jiahe/anaconda3/envs/gello/lib/python3.8/site-packages/polymetis/robot_interface.py", line 89, in __init__
+    else self.grpc_connection.GetRobotClientMetadata(EMPTY)
+  File "/home/jiahe/anaconda3/envs/gello/lib/python3.8/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/jiahe/anaconda3/envs/gello/lib/python3.8/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1714321787.068185522","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3217,"referenced_errors":[{"created":"@1714321787.068184670","description":"failed to connect to all addresses","file":"src/core/lib/transport/error_utils.cc","file_line":165,"grpc_status":14}]}"
+>
+
