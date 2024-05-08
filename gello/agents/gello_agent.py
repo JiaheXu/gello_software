@@ -61,15 +61,15 @@ PORT_CONFIG_MAP: Dict[str, DynamixelRobotConfig] = {
     # ),
     # panda
     # "/dev/cu.usbserial-FT3M9NVB": DynamixelRobotConfig(
-    "/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT8ISMX8-if00-port0": DynamixelRobotConfig(
+    "/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT8ISUAW-if00-port0": DynamixelRobotConfig(
         joint_ids=(1, 2, 3, 4, 5, 6, 7),
         joint_offsets=(
             0 * np.pi / 2,
-            4 * np.pi / 2,
-            4 * np.pi / 2,
-            4 * np.pi / 2,
+            2 * np.pi / 2,
+            2 * np.pi / 2,
+            2 * np.pi / 2,
             # 0 * np.pi / 2 + 2 * np.pi,
-            4 * np.pi / 2,
+            2 * np.pi / 2,
             4 * np.pi / 2,
             3 * np.pi / 2,
         ),
