@@ -4,7 +4,7 @@ import numpy as np
 
 
 class Agent(Protocol):
-    def act(self, obs: Dict[str, Any]) -> np.ndarray:
+    def act(self, obs) -> np.ndarray:
         """Returns an action given an observation.
 
         Args:

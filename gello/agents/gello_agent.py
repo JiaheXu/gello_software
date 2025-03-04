@@ -125,7 +125,7 @@ class GelloAgent(Agent):
             config = PORT_CONFIG_MAP[port]
             self._robot = config.make_robot(port=port, start_joints=start_joints)
 
-    def act(self, obs: Dict[str, np.ndarray]) -> np.ndarray:
+    def act(self, obs) -> np.ndarray:
         return self._robot.get_joint_state()
         dyna_joints = self._robot.get_joint_state()
         # current_q = dyna_joints[:-1]  # last one dim is the gripper
